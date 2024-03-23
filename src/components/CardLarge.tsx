@@ -1,10 +1,10 @@
 import Image from "next/image";
-const CardLarge = () => {
+const CardLarge = ({ items }: any) => {
   return (
     <div className="w-[316px] h-[564px] border-2 border-[#E6E6E6] rounded-lg p-4">
       <div>
         <Image
-          src="/images/image cl1.png"
+          src={items?.img}
           width={284}
           height={201}
           alt="Picture of the author"
@@ -13,7 +13,7 @@ const CardLarge = () => {
 
       <div className=" mt-2">
         <div className="flex gap-1">
-          <h4 className="font-semibold text-xl mb-2">Omah Apik 3</h4>
+          <h4 className="font-semibold text-xl mb-2">{items?.title}</h4>
           <p className="px-3 py-1 bg-[#F1F1F1] rounded-2xl font-normal text-base">
             Scandinavian
           </p>
@@ -89,7 +89,7 @@ const CardLarge = () => {
         <hr className="mb-4 h-px bg-gray-200 border-0" />
         <div className="mb-4 flex flex-col gap-1">
           <p className="text-sm  font-normal">Harga Desain</p>
-          <h3 className="font-semibold text-2xl">Rp. 32.500.000</h3>
+          <h3 className="font-semibold text-2xl">{items?.price}</h3>
           <p className="text-sm  font-normal text-[#808080]">
             Harga konstruksi mulai dari Rp 560.000.000
           </p>

@@ -4,7 +4,7 @@ const Hero = () => {
     <div>
       <Image
         src="/images/image hero.png"
-        width={1560}
+        width={1600}
         height={552}
         alt="icon"
       />
